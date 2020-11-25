@@ -6,30 +6,10 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            
-            double a, b, c, d;
-            Console.WriteLine("Введите коэффициенты квадратного уравнения вида  ax^2 + bx + c :");
-            Console.WriteLine("a = ");
-            a = double.Parse(Console.ReadLine());
-            Console.WriteLine("b = ");
-            b = double.Parse(Console.ReadLine());
-            Console.WriteLine("c = ");
-            c = double.Parse(Console.ReadLine());
+           
+            char c = Console.ReadLine()[0];
+            Console.WriteLine("Следующий символ: {0}", (char)(c + 1));
 
-            d = b * b - 4 * a * c;
-            if(d > 0)
-            {
-                Console.WriteLine("x1 = " + (((-b - Math.Sqrt(d)) / 2 * a)));
-                Console.WriteLine("x2 = " + (((-b + Math.Sqrt(d)) / 2 * a)));
-            }
-            else if(d == 0)
-            {
-                Console.WriteLine("x = " + (-b / (2 * a)));
-            }
-            else
-            {
-                Console.WriteLine("Дискриминант меньше 0, корней нет");
-            }
         }
     }
 }
